@@ -1,0 +1,17 @@
+.podcast-list__item {
+    box-shadow: 0 .2rem .5rem var(--bs-border-color);
+    margin: 4rem 0;
+    padding: 4.5rem 1rem 0;
+    position: relative;
+
+    .podcast-list__image {
+        position: absolute;
+        top: -3rem;
+        width: 7rem;
+        height: 7rem;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
