@@ -13,7 +13,7 @@ function App() {
       <div className="container-lg">
         <Routes>
           <Route path="/" element={<PodcastListPage />} />
-          <Route path="podcast" element={<PodcastDetailPage />} />
+          <Route path="/podcast/:id" element={<PodcastDetailPage />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>

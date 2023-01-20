@@ -26,6 +26,8 @@ export default function PodcastListPage() {
     ) {
       fetch(process.env.REACT_APP_PODCAST_LIST_ENDPOINT)
         .then(result => result.json())
+        // eslint-disable-next-line no-console
+        .catch(error => console.error('Error:', error))
         .then(result => {
           if (result && result.feed && result.feed.entry) {
             const finalResult = result.feed.entry.map(item => ({
@@ -33,6 +35,7 @@ export default function PodcastListPage() {
               image: item['im:image'][2].label,
               title: item['im:name'].label,
               author: item['im:artist'].label,
+              description: item.summary.label,
             }));
             localStorage.setItem(
               process.env.REACT_APP_PODCAST_LIST_RESULT_LOCAL_STORAGE_KEY,
@@ -88,7 +91,13 @@ export default function PodcastListPage() {
       <div className="row mt-4">
         {displayData.length > 0 ? (
           displayData.map(item => (
-            <PodcastItem key={item.id} author={item.author} image={item.image} title={item.title} />
+            <PodcastItem
+              key={item.id}
+              id={item.id}
+              author={item.author}
+              image={item.image}
+              title={item.title}
+            />
           ))
         ) : (
           <div className="text-center m-5">
