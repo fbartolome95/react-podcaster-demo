@@ -26,6 +26,11 @@ Your app is ready to be deployed!
 
 ## Troubleshooting
 
+### CORs issues
+
+In development, you can use Chrome extension `CORS unblock` to make successful endpoint calls. You
+also can use the `cors-anywhere` setting the preffix in this project's `.env` file.
+
 ### Podcast Detail fetch not working
 
 In development, you may be using "cors-anywhere" middleware for prevent CORS troubles. If you have
