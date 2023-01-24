@@ -93,7 +93,7 @@ export default function PodcastListPage() {
           displayData.map(item => (
             <PodcastItem
               key={item.id}
-              id={item.id}
+              id={Number(item.id)}
               author={item.author}
               image={item.image}
               title={item.title}

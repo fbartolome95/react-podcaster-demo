@@ -5,7 +5,7 @@ import './PodcastItem.scss';
 export default function PodcastItem({id, image, title, author}) {
   return (
     <div className="col-3">
-      <Link className="text-decoration-none " to={`/podcast/${id}`}>
+      <Link className="text-decoration-none" to={`/podcast/${id}`}>
         <div className="podcast-list__item text-center border">
           <img
             className="podcast-list__image object-fit-cover rounded-circle"
@@ -21,7 +21,7 @@ export default function PodcastItem({id, image, title, author}) {
 }
 
 PodcastItem.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,

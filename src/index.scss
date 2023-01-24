@@ -9,3 +9,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+/* Utilities */
+
+.-white-space-pre-line {
+  white-space: pre-line;
+}
