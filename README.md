@@ -24,6 +24,15 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
+## Troubleshooting
+
+### Podcast Detail fetch not working
+
+In development, you may be using "cors-anywhere" middleware for prevent CORS troubles. If you have
+reached the requests limit, you need to refresh the token accesing
+[https://cors-anywhere.herokuapp.com/corsdemo](https://cors-anywhere.herokuapp.com/corsdemo) and
+clicking on the button to request access to the demo server.
+
 ## Author
 
 Fernando Bartolomé
